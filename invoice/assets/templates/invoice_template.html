@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; }
+    h1, h2, h3, h4, h5, h6 { margin: 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+    th, td { padding: 12px; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Invoice</h1>
+    <p>Date: {{invoice_date}}</p>
+  </header>
+  <section>
+    <h2>Customer</h2>
+    <p>{{customer_name}}</p>
+  </section>
+  <section>
+    <h2>Items</h2>
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr>
+      </thead>
+      <tbody>
+        {{invoice_items}}
+      </tbody>
+    </table>
+  </section>
+  <footer>
+    <p>Total: {{invoice_total}}</p>
+  </footer>
+</body>
+</html>

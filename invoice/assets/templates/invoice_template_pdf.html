@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice PDF</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    th, td { padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Invoice PDF</h1>
+    <p>{{invoice_date}}</p>
+  </header>
+  <section>
+    <h2>Customer information</h2>
+    <p>{{customer_name}}</p>
+  </section>
+  <section>
+    <h2>Items</h2>
+    <table>
+      <thead>
+        <tr><th>Description</th><th>Quantity</th><th>Unit Price</th><th>Total</th></tr>
+      </thead>
+      <tbody>
+        {{invoice_items}}
+      </tbody>
+    </table>
+  </section>
+  <footer>
+    <p><strong>Total:</strong> {{invoice_total}}</p>
+  </footer>
+</body>
+</html>

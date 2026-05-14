@@ -1,16 +1,23 @@
-# invoice
+# Invoice App
 
-A new Flutter project.
+A Flutter invoice management application scaffolded with a clean feature-driven architecture.
 
-## Getting Started
+## Project structure
 
-This project is a starting point for a Flutter application.
+- `lib/core/` — shared app utilities, constants, services, widgets, theme, and database helpers
+- `lib/features/` — domain-specific feature modules for dashboard, units, customers, invoices, payments, and reports
+- `lib/routes/` — centralized app route names and route generator
+- `lib/shared/` — shared models, enums, and extension helpers
+- `assets/templates/` — invoice HTML templates for export and PDF generation
 
-A few resources to get you started if this is your first Flutter project:
+## Getting started
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Open the project in your IDE.
+2. Run `flutter pub get`.
+3. Start the app using `flutter run`.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Notes
+
+- Assets are registered in `pubspec.yaml`.
+- The initial route is the dashboard screen.
+- The current scaffold includes placeholder screens and can be extended feature by feature.
